@@ -1,1 +1,12 @@
-<?php
+@include('css')
+@include('navbar')
+
+
+
+
+
+
+
+
+
+
