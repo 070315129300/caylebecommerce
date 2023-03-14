@@ -28,7 +28,7 @@ p{
     margin: 15px 0 15px 0;
 }
 .section-p1 {
-    padding: 40px 80px;
+    padding: 30px 80px;
 }
 .section-m1 {
     margin:40px 0;
@@ -163,7 +163,7 @@ body{
     bottom: 20px;
     right: 10px;
 }
-#banner{
+#banners{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -174,18 +174,85 @@ body{
     background-size: cover;
     background-position: center;
 }
-#banner h4{
+#banners h4{
     color: white;
     font-size: 16px;
 }
 
-#banner h2{
+#banners h2{
     color: white;
     font-size: 30px;
     padding: 10px 0;
 }
-#banner h2 span{
+#banners h2 span{
     color:red;
+}
+#sm-banners{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#sm-banners .banner-box{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    min-width: 580px;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+
+}
+#sm-banners h4{
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+}
+#sm-banners h2{
+    color: white;
+    font-size: 28px;
+    font-weight: 800;
+}
+#sm-banners span{
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    padding-bottom: 50px;
+}
+#banner3{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 80px;
+}
+#banner3 .banner-box{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    min-width: 30px;
+    height: 30vh;
+    background-size: cover;
+    background-position: center;
+    padding: 50px;
+    margin-bottom: 20px;
+
+}
+
+#banner3 h2 {
+    color: #fff;
+    font-weight: 900;
+    font-size: 22px;
+}
+#banner3 h3 {
+    color: red;
+    font-weight: 900;
+    font-size: 15px;
 }
 
 

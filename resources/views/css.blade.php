@@ -17,9 +17,11 @@
 
     <!-- Style -->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
-
+    <link rel="stylesheet" href="css/stylees.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/styles.css">
+
+
 </head>
 <body>
 
