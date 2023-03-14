@@ -56,7 +56,7 @@ body{
     color: #088178;
 }
 #featuress .feat-box{
-    width: 230px;
+    width: 180px;
     text-align:center;
     padding:25px 15px;
     box-shadow: 20px 20px 34px rgba(0,0,0,0.3);
@@ -204,7 +204,6 @@ body{
     background-size: cover;
     background-position: center;
     padding: 30px;
-
 }
 #sm-banners h4{
     color: white;
@@ -254,7 +253,85 @@ body{
     font-weight: 900;
     font-size: 15px;
 }
+@media (max-width:799px){
+    .section-p1{
+        padding: 20px 20px;
+    }
+    #heros{
+        height: 70vh;
+        background-position: top 30% right 40%;
+        padding: 0 80px;
 
+    }
+    #featuress{
+
+        justify-content: center;
+
+    }
+    #featuress .feat-box{
+
+        margin:15px 15px;
+    }
+
+    #product11 .pro-container{
+
+        justify-content: center;
+
+    }
+
+    #product11 .pro{
+        margin: 15px ;
+    }
+    #banners{
+        height: 20vh;
+    }
+    #sm-banners .banner-box{
+        text-align: center;
+        min-width: 180%;
+        height: 30vh;
+    }
+    #banner3{
+        padding: 0 30px;
+    }
+    #banner3 .banner-box{
+        width:30%;
+    }
+
+}
+@media (max-width: 477px) {
+    #heros {
+        background-position: 55%;
+        padding: 0 20px;
+    }
+    h1{
+        font-size: 38px;
+    }
+    h2{
+        font-size: 32px;
+    }
+    #featuress{
+        justify-content: space-between;
+    }
+    #featuress .feat-box{
+        width: 155px;
+        margin: 0 0 15px 0;
+    }
+    #product11 .pro {
+        width: 100%;
+    }
+    #banners {
+       height: 40vh;
+    }
+    #sm-banners #banner-box2{
+        margin-top: 20px;
+    }
+    #banner3 {
+        padding: 0 20px;
+    }
+    #banner3 .banner-box {
+        width: 100%;
+    }
+}
 
 
 

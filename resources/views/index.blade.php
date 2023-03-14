@@ -3,7 +3,7 @@
 
 
 <section id="heros" style="background-image: url('images/image5.jpg');">
-    <h4>Trade-in-offer</h4>
+    <h1>Trade-in-offer</h1>
     <h2>Super value deals</h2>
     <h1>on all products</h1>
     <p>Save more with coupons $ up to 70% off!</p>
@@ -12,29 +12,29 @@
 
 <section id="featuress" class="section-p1">
     <div class="feat-box">
-        <img src="images/hero_3.jpg" height="120px" width="" alt="">
+        <img src="images/hero_3.jpg" height="120px" width="120px" alt="">
         <h6>free shipping</h6>
     </div>
     <div class="feat-box">
-        <img src="images/hero_3.jpg" height="120px"  alt="">
+        <img src="images/hero_3.jpg" height="120px" width="120px" alt="">
         <h6>free shipping</h6>
     </div>
     <div class="feat-box">
-        <img src="images/hero_3.jpg" height="120px"  alt="">
+        <img src="images/hero_3.jpg" height="120px" width="120px" alt="">
         <h6>free shipping</h6>
     </div>
     <div class="feat-box">
-        <img src="images/hero_3.jpg" height="120px"  alt="">
+        <img src="images/hero_3.jpg" height="120px" width="120px" alt="">
         <h6>free shipping</h6>
     </div>
     <div class="feat-box">
-        <img src="images/hero_3.jpg" height="120px"  alt="">
+        <img src="images/hero_3.jpg" height="120px" width="120px" alt="">
         <h6>free shipping</h6>
     </div>
-{{--    <div class="feat-box">--}}
-{{--        <img src="images/hero_3.jpg" height="120px"  alt="">--}}
-{{--        <h6>free shipping</h6>--}}
-{{--    </div>--}}
+    <div class="feat-box">
+        <img src="images/hero_3.jpg" height="120px" width="120px" alt="">
+        <h6>free shipping</h6>
+    </div>
 
 </section>
 
@@ -156,7 +156,6 @@
 </section>
 
 <section id="banners" class = 'section-m1' style="background-image: url('images/image1.png');">
-    <h4>Follow Me To The World Of Perfumes</h4>
     <h2>Up to <span>70%  off</span> All Perfumes & Cologue</h2>
     <button class="btn btn-warning"><a href="#">Explore More</a></button>
 </section>
@@ -282,13 +281,13 @@
     <div class="banner-box" style="background-image: url('images/image22.jpg');">
         <h4>Crazy deals</h4>
         <h2>buy 1 get 1 free</h2>
-        <span>The best classic dress is on sale at demmstore</span>
-        <button class="btn btn-outline-secondary">learn more</button>
+        <span style="margin: 0; padding: 0" >The best classic dress is on sale at demmstore</span>
+        <button class="btn btn-outline-secondary" >learn more</button>
     </div>
-    <div class="banner-box" style="background-image: url('images/image6.jpg');">
+    <div class="banner-box " id="banner-box2" style="background-image: url('images/image6.jpg');">
         <h4>Crazy deals</h4>
         <h2>Smell good, it your right</h2>
-        <span>The best perfume deal at demmstore</span>
+        <span style="margin: 0; padding: 0" >The best perfume deal at demmstore</span>
         <button class="btn btn-outline-secondary">learn more</button>
     </div>
 </section>
@@ -296,17 +295,17 @@
 
 <section id="banner3">
     <div class="banner-box" style="background-image: url('images/image23.jpg');">
-        <h2>Smell good, it your right</h2>
-        <h3>raining collection</h3>
+        <h4>Smell good, it your right</h4>
+        <p>raining collection</p>
     </div>
     <div class="banner-box" style="background-image: url('images/image24.jpg');">
-        <h2>Smell good, it your right</h2>
-        <h3>raining  <span style="color: orange"> collection</span></h3>
+        <h4 style="margin: 0; padding: 0 " >Smell good, it your right</h4>
+        <p style="margin: 0; padding: 0" >raining  <span style="color: orange"> collection</span></p>
     </div>
     <div class="banner-box" style="background-image: url('images/image2.jpg');">
-        <h2>Smell good, it your right</h2>
-        <h3>raining <span style="color: gold"> collection</span></h3>
+        <h4>Smell good, it your right</h4>
+        <p>raining <span style="color: gold"> collection</span></p>
     </div>
 </section>
 
-@include('footer')
+
