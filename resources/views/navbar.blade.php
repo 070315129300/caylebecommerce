@@ -45,6 +45,7 @@
 
             <div class="site-logo">
                 <a href="/" class="text-black"><span class="text-secondary" style="color:orange !important;">Demmstore </span></a>
+
             </div>
 
             <div class="col-12">
@@ -52,30 +53,28 @@
 
                     <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
                         <li><a href="/" class="nav-link">Home</a></li>
-                        <li><a href="shop" class="nav-link">Shop</a></li>
 
 
                         <li class="has-children">
-                            <a href="about" class="nav-link">About Us</a>
+                            <a  class="nav-link">Buy More</a>
                             <ul class="dropdown arrow-top">
-                                <li><a href="#team-section" class="nav-link">Team</a></li>
-                                <li><a href="#pricing-section" class="nav-link">Pricing</a></li>
-                                <li><a href="#faq-section" class="nav-link">FAQ</a></li>
                                 <li class="has-children">
-                                    <a href="#">More Links</a>
+                                    <a>Cloth</a>
                                     <ul class="dropdown">
-                                        <li><a href="#">Menu One</a></li>
-                                        <li><a href="#">Menu Two</a></li>
-                                        <li><a href="#">Menu Three</a></li>
+                                        <li><a href="malecloth">Male</a></li>
+                                        <li><a href="femalecloth">Female</a></li>
+                                        <li><a href="unisexcloth">Unisex</a></li>
                                     </ul>
                                 </li>
+                                <li><a href="perfume" class="nav-link">Perfume</a></li>
+
                             </ul>
                         </li>
 
-                        <li><a href="#about-section" class="nav-link">About</a></li>
-                        <li><a href="#events-section" class="nav-link">Blog</a></li>
-                        <li><a href="#contact-section" class="nav-link">Contact</a></li>
-                       <li> <a href="#"><span class="icon-shopping-cart"></span></a></li>
+                        <li><a href="about" class="nav-link">About</a></li>
+                        <li><a href="blog" class="nav-link">Blog</a></li>
+                        <li><a href="contact" class="nav-link">Contact</a></li>
+                       <li> <a href="cart"><span class="icon-shopping-cart"></span></a></li>
                     </ul>
                 </nav>
 

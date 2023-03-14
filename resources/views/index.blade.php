@@ -4,9 +4,9 @@
 
 <section id="heros" style="background-image: url('images/image5.jpg');">
     <h1>Trade-in-offer</h1>
-    <h2>Super value deals</h2>
+    <h2 style="color: orange">Super value deals</h2>
     <h1>on all products</h1>
-    <p>Save more with coupons $ up to 70% off!</p>
+    <p style="color: white">Save more with coupons $ up to 70% off!</p>
     <button class="btn btn-outline-dark">shop now</button>
 </section>
 

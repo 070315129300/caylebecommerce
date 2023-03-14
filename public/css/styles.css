@@ -38,7 +38,6 @@ body{
 }
 /*edit here for image index*/
 #heros{
-    background-image: url('images/hero_3.jpg');
     height: 80vh;
     width: 100%;
     background-size: cover;
@@ -73,7 +72,7 @@ body{
 
 #featuress{
     display: flex;
-    align-item:center;
+    align-items:center;
     justify-content: space-between;
     flex-wrap: wrap;
 }

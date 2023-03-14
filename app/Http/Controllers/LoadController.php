@@ -10,4 +10,22 @@ class LoadController extends Controller
     {
         return view('index');
     }
+    public function malecloth(){
+        return view('pages.malecloth');
+    }
+    public function femalecloth(){
+        return view('pages.femalecloth');
+    }
+    public function unisexcloth(){
+        return view('pages.unisexcloth');
+    }
+    public function about(){
+        return view('pages.about');
+    }
+    public function blog(){
+        return view('pages.blog');
+    }
+    public function contact(){
+        return view('pages.contact');
+    }
 }
