@@ -1,7 +1,13 @@
 @include('css')
 @include('navbar')
 
+<section id="page-header" style="background-image: url('images/wall_cover.png');">
 
+    <h2 style="color: orange">Super value deals</h2>
+
+    <p >Save more with coupons $ up to 70% off!</p>
+
+</section>
 
 
 <section id="product11" class="section-p1">
@@ -242,20 +248,7 @@
 
 </section>
 
-<section id="sm-banners" class="section-p1" >
-    <div class="banner-box" style="background-image: url('images/image22.jpg');">
-        <h4>Crazy deals</h4>
-        <h2>buy 1 get 1 free</h2>
-        <span style="margin: 0; padding: 0" >The best classic dress is on sale at demmstore</span>
-        <button class="btn btn-outline-secondary" >learn more</button>
-    </div>
-    <div class="banner-box " id="banner-box2" style="background-image: url('images/image6.jpg');">
-        <h4>Crazy deals</h4>
-        <h2>Smell good, it your right</h2>
-        <span style="margin: 0; padding: 0" >The best perfume deal at demmstore</span>
-        <button class="btn btn-outline-secondary">learn more</button>
-    </div>
-</section>
+
 
 
 

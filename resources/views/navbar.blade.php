@@ -44,7 +44,7 @@
 
 
             <div class="site-logo">
-                <a href="/" class="text-black"><span class="text-secondary" style="color:orange !important;">Demmstore </span></a>
+                <a href="/" class="text-black"><span class="text-secondary" style="color:orangered !important;">Demmstore </span></a>
 
             </div>
 
