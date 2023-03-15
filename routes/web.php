@@ -27,6 +27,8 @@ Route::get('unisexcloth', [LoadController::class, 'unisexcloth']);
 Route::get('about', [LoadController::class, 'about']);
 Route::get('blog', [LoadController::class, 'blog']);
 Route::get('contact', [LoadController::class, 'contact']);
+Route::get('viewproduct', [LoadController::class, 'viewproduct']);
+
 
 //cartcontroller
 Route::get('cart', [CartController::class, 'cart']);

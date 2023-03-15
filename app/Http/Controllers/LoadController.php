@@ -28,4 +28,7 @@ class LoadController extends Controller
     public function contact(){
         return view('pages.contact');
     }
+    public function viewproduct(){
+        return view('pages.viewproduct');
+    }
 }
