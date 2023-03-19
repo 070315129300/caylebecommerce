@@ -75,7 +75,33 @@
                         <li><a href="blog" class="nav-link">Blog</a></li>
                         <li><a href="contact" class="nav-link">Contact</a></li>
                        <li> <a href="cart"><span class="icon-shopping-cart"></span></a></li>
+
+                        <li class="has-children">
+                                    <p class="mb-0 d-none d-sm-block navbar-profile-name">{{ Auth::user()->name }}</p>
+                                <ul class="dropdown arrow-top">
+                                    <li class="has-children">
+                                        <a class="dropdown-item preview-item" href="{{url('logout')}}"
+                                           onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                                @csrf
+                                            </form>
+                                            <div class="preview-thumbnail">
+                                                <div class="preview-icon bg-dark rounded-circle">
+                                                    <i class="mdi mdi-logout text-danger"></i>
+                                                </div>
+                                            </div>
+                                            <div class="preview-item-content">
+                                                <p class="preview-subject mb-1"> Log out</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                        </li>
                     </ul>
+
+
                 </nav>
 
             </div>

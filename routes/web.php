@@ -52,21 +52,14 @@ Route::get('blogtable', [AdminController::class,'blogtable']);
 Route::get('addblog', [AdminController::class,'addblog']);
 Route::get('allcontact', [AdminController::class,'allcontact']);
 Route::get('dashboard', [AdminController::class, 'dashboard']);
+Route::post('insertuser', [AdminController::class, 'insertuser']);
+Route::post('insertfreeshipping', [AdminController::class, 'insertfreeshipping']);
+Route::post('insertproduct',[AdminController::class, 'insertproduct']);
+Route::post('insertnewarrival',[AdminController::class, 'insertnewarrival']);
+Route::post('insertfeaturedproduct',[AdminController::class, 'insertfeaturedproduct']);
+Route::post('insertblog', [AdminController::class, 'insertblog']);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Route::get('/dashboard', [\App\Http\Controllers\HomeController::class, 'redirect']);
 
 Auth::routes();
 

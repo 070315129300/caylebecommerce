@@ -4,7 +4,7 @@
 
 
     <section class="header">
-        <h2>ADD STAFF</h2>
+        <h2>Add User</h2>
     </section>
     <section class="form-container">
         @if(Session::has('success'))
@@ -19,11 +19,11 @@
             <div class="grid">
                 <input
                     type="text"
-                    name="username"
-                    id="username"
+                    name="name"
+                    id="name"
                     required
                     placeholder="username"
-                    maxlength="10"
+
                 />
 
                 <input
@@ -40,14 +40,6 @@
                     required
                     placeholder="Phone"
                 />
-                <label class="label" for="inputTag">
-                    Select Profile Image <br />
-                    <i class="fa fa-camera"></i>
-                    <input  name="file" type="file" required />
-
-                    <br />
-                    <span id="imageName"></span>
-                </label>
             </div>
 
             <div class="submit"><button type="submit">Submit</button></div>

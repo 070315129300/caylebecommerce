@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('freeshippings', function (Blueprint $table) {
             $table->id();
+            $table->string('productname');
+            $table->string('image');
             $table->timestamps();
         });
     }

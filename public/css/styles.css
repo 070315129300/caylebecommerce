@@ -353,6 +353,21 @@ body{
     color: orangered;
 
 }
+#about-head{
+    display: flex;
+    align-items: center;
+}
+#about-head img{
+    width: 50%;
+    height: 600px;
+}
+#about-head div{
+    padding-left: 40px;
+    width: 50%;
+}
+
+
+
 
 
 
@@ -467,6 +482,18 @@ body{
         margin-bottom:30px ;
     }
     #blog .blog-details{
+        width: 100%;
+    }
+    #about-head{
+        flex-direction: column;
+    }
+    #about-head img{
+        width: 100%;
+        height: 400px;
+        margin-bottom: 20px;
+
+    }
+    #about-head div{
         width: 100%;
     }
 
