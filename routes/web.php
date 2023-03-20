@@ -58,6 +58,8 @@ Route::post('insertproduct',[AdminController::class, 'insertproduct']);
 Route::post('insertnewarrival',[AdminController::class, 'insertnewarrival']);
 Route::post('insertfeaturedproduct',[AdminController::class, 'insertfeaturedproduct']);
 Route::post('insertblog', [AdminController::class, 'insertblog']);
+Route::post('insertcontact', [AdminController::class, 'insertcontact']);
+
 
 Route::get('/dashboard', [\App\Http\Controllers\HomeController::class, 'redirect']);
 

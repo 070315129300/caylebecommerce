@@ -1,9 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use App\Models\Newarrival;
 use Illuminate\Http\Request;
+use App\Models\Newarrival;
+
 use Illuminate\Support\Facades\Auth;
 use App\Models\Freeshipping;
 use App\Models\Featuredproduct;
@@ -17,7 +17,14 @@ use Hash;
 class AdminController extends Controller
 {
     public function dashboard(){
-        return view('home');
+        $message = Message::all();
+        $blog = Blog::all();
+        $featured = Featuredproduct::all();
+        $freeshipping = Freeshipping::all();
+        $order = Order::all();
+        $product = Product::all();
+        $user = User::all();
+        return view('home', compact('message', 'blog', 'featured', 'freeshipping', 'order', 'product', 'user'));
     }
     public function adduser(){
         return  view('admin.adduser');
@@ -48,8 +55,7 @@ class AdminController extends Controller
         $user->productname = $request->productname;
         $image = $request->file;
         if($image) {
-            $imagename = time() . '.' . $image->getClientoriginalExtension();
-
+            $imagename=time().'.'.$image->getClientoriginalExtension();
             $request->file->move('freeshippingimage', $imagename);
             $user->image = $imagename;
         }
@@ -64,7 +70,8 @@ class AdminController extends Controller
 
     }
     public function allfreeshipping(){
-        return view('admin.freeshipping');
+        $user = Freeshipping::all();
+        return view('admin.freeshipping', ['user', $user]);
     }
     public function addproduct(){
         return view('admin.addproduct');
@@ -78,33 +85,33 @@ class AdminController extends Controller
 
         $image1 = $request->file1;
         if($image1) {
-            $imagename = time() . '.' . $image1->getClientoriginalExtension();
+            $imagename =time().'.'.$image1->getClientoriginalExtension();
 
-            $request->file1->move('freeshippingimage', $imagename);
+            $request->file1->move('productimage', $imagename);
             $user->image1 = $imagename;
         }
 
         $image2 = $request->file2;
         if($image2) {
-            $imagename = time() . '.' . $image2->getClientoriginalExtension();
+            $imagename = time().'.'.$image2->getClientoriginalExtension();
 
-            $request->file2->move('freeshippingimage', $imagename);
+            $request->file2->move('productimage', $imagename);
             $user->image2 = $imagename;
         }
 
         $image3 = $request->file3;
         if($image3) {
-            $imagename = time() . '.' . $image3->getClientoriginalExtension();
+            $imagename = time().'.'.$image3->getClientoriginalExtension();
 
-            $request->file3->move('freeshippingimage', $imagename);
+            $request->file3->move('productimage', $imagename);
             $user->image3 = $imagename;
         }
 
         $image4 = $request->file4;
         if($image4) {
-            $imagename = time() . '.' . $image4->getClientoriginalExtension();
+            $imagename = time().'.'.$image4->getClientoriginalExtension();
 
-            $request->file4->move('freeshippingimage', $imagename);
+            $request->file4->move('productimage', $imagename);
             $user->image4 = $imagename;
         }
 
@@ -117,10 +124,12 @@ class AdminController extends Controller
         return redirect()->back()->with('message', 'Uploaded successfully ');
     }
     public function allproduct(){
-        return view('admin.allproduct');
+        $user = Product::all();
+        return view('admin.allproduct', compact('user'));
     }
     public function newarrival(){
-        return view('admin.allnewarrival');
+        $user = Newarrival::all();
+        return view('admin.allnewarrival', compact('user'));
     }
     public function addnewarrival(){
         return view('admin.addnewarrival');
@@ -134,33 +143,33 @@ class AdminController extends Controller
 
         $image1 = $request->file1;
         if($image1) {
-            $imagename = time() . '.' . $image1->getClientoriginalExtension();
+            $imagename = time().'.'.$image1->getClientoriginalExtension();
 
-            $request->file1->move('freeshippingimage', $imagename);
+            $request->file1->move('arrivalimage', $imagename);
             $user->image1 = $imagename;
         }
 
         $image2 = $request->file2;
         if($image2) {
-            $imagename = time() . '.' . $image2->getClientoriginalExtension();
+            $imagename = time().'.'.$image2->getClientoriginalExtension();
 
-            $request->file2->move('freeshippingimage', $imagename);
+            $request->file2->move('arrivalimage', $imagename);
             $user->image2 = $imagename;
         }
 
         $image3 = $request->file3;
         if($image3) {
-            $imagename = time() . '.' . $image3->getClientoriginalExtension();
+            $imagename = time().'.'.$image3->getClientoriginalExtension();
 
-            $request->file3->move('freeshippingimage', $imagename);
+            $request->file3->move('arrivalimage', $imagename);
             $user->image3 = $imagename;
         }
 
         $image4 = $request->file4;
         if($image4) {
-            $imagename = time() . '.' . $image4->getClientoriginalExtension();
+            $imagename = time().'.'.$image4->getClientoriginalExtension();
 
-            $request->file4->move('freeshippingimage', $imagename);
+            $request->file4->move('arrivalimage', $imagename);
             $user->image4 = $imagename;
         }
 
@@ -173,7 +182,25 @@ class AdminController extends Controller
         return redirect()->back()->with('message', 'Uploaded successfully ');
     }
     public function ordertable(){
-        return view('admin.order');
+        $user = Order::all();
+        return view('admin.order', compact('user'));
+    }
+    public function insertorder(Request $request){
+        $user = new Order;
+        $user->user_id = 1;
+        $user->productname = $request->productname;
+        $user->amount = $request->amount;
+        $user->no_of_product = $request->no_of_product;
+        $user->product_id =$request->product_id;
+        $user->size = $request->size;
+        $image1 = $request->file1;
+        if($image1) {
+            $imagename =time().'.'.$image1->getClientoriginalExtension();
+
+            $request->file1->move('orderimage', $imagename);
+            $user->image1 = $imagename;
+        }
+
     }
     public function addfeaturedproduct(){
         return view('admin.addfeaturedproduct ');
@@ -187,33 +214,33 @@ class AdminController extends Controller
 
         $image1 = $request->file1;
         if($image1) {
-            $imagename = time() . '.' . $image1->getClientoriginalExtension();
+            $imagename = time().'.'.$image1->getClientoriginalExtension();
 
-            $request->file1->move('freeshippingimage', $imagename);
+            $request->file1->move('featuredimage', $imagename);
             $user->image1 = $imagename;
         }
 
         $image2 = $request->file2;
         if($image2) {
-            $imagename = time() . '.' . $image2->getClientoriginalExtension();
+            $imagename = time().'.'.$image2->getClientoriginalExtension();
 
-            $request->file2->move('freeshippingimage', $imagename);
+            $request->file2->move('featuredimage', $imagename);
             $user->image2 = $imagename;
         }
 
         $image3 = $request->file3;
         if($image3) {
-            $imagename = time() . '.' . $image3->getClientoriginalExtension();
+            $imagename = time().'.'.$image3->getClientoriginalExtension();
 
-            $request->file3->move('freeshippingimage', $imagename);
+            $request->file3->move('featuredimage', $imagename);
             $user->image3 = $imagename;
         }
 
         $image4 = $request->file4;
         if($image4) {
-            $imagename = time() . '.' . $image4->getClientoriginalExtension();
+            $imagename = time().'.'.$image4->getClientoriginalExtension();
 
-            $request->file4->move('freeshippingimage', $imagename);
+            $request->file4->move('featuredimage', $imagename);
             $user->image4 = $imagename;
         }
 
@@ -226,10 +253,12 @@ class AdminController extends Controller
         return redirect()->back()->with('message', 'Uploaded successfully ');
     }
     public function featuredproduct(){
-        return view('admin.allfeaturedproduct');
+        $user = Featuredproduct::all();
+        return view('admin.allfeaturedproduct', compact('user'));
     }
     public function blogtable(){
-        return view('admin.allblog');
+        $user = Blog::all();
+        return view('admin.allblog', compact('user'));
     }
     public function addblog(){
         return view('admin.addblog');
@@ -241,9 +270,9 @@ class AdminController extends Controller
 
         $image = $request->file;
         if($image) {
-            $imagename = time() . '.' . $image->getClientoriginalExtension();
+            $imagename = time().'.'.$image->getClientoriginalExtension();
 
-            $request->file->move('freeshippingimage', $imagename);
+            $request->file->move('blogimage', $imagename);
             $user->image = $imagename;
         }
 
@@ -256,6 +285,16 @@ class AdminController extends Controller
         return redirect()->back()->with('message', 'Uploaded successfully ');
     }
     public function allcontact(){
-        return view('admin.allcontact');
+        $user = Message::all();
+        return view('admin.allcontact', compact('user'));
+    }
+    public function insertcontact(Request $request){
+       $user = new Message;
+       $user->name = $request->name;
+       $user->email = $request->email;
+       $user->subject = $request->subject;
+       $user->message = $request->message;
+       $user->save();
+        return redirect()->back()->with('message', 'has been sent ');
     }
 }

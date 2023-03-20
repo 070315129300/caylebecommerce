@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('user_id'); //find a way to put it here
             $table->string('productname');
+            $table->string('product_id');
             $table->string('image');
             $table->string('amount');
             $table->string('no_of_product');

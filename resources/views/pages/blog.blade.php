@@ -23,48 +23,22 @@
             <a href="">Continue Reading</a>
         </div>
     </div>
-
+            @foreach($user as $users)
     <div class="blog-box">
         <div class="blog-img">
-            <img src="images/image5.jpg" alt="">
+            <img  src="blogimage/{{$users->image}}" alt="">
         </div>
         <div class="blog-details">
-            <h4>The lagos lifestyle</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                A adipisci aperiam asperiores aspernatur blanditiis delectus ducimus
-                error ex laborum natus nesciunt obcaecati, possimus, praesentium ratione
-                reprehenderit, sequi soluta ut veniam.</p>
+            <h4>{{$users->topic}}</h4>
+            <p>{{$users->body}}</p>
             <a href="">Continue Reading</a>
         </div>
     </div>
+    @endforeach
 
-    <div class="blog-box">
-        <div class="blog-img">
-            <img src="images/image5.jpg" alt="">
-        </div>
-        <div class="blog-details">
-            <h4>The lagos lifestyle</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                A adipisci aperiam asperiores aspernatur blanditiis delectus ducimus
-                error ex laborum natus nesciunt obcaecati, possimus, praesentium ratione
-                reprehenderit, sequi soluta ut veniam.</p>
-            <a href="">Continue Reading</a>
-        </div>
-    </div>
 
-    <div class="blog-box">
-        <div class="blog-img">
-            <img src="images/image5.jpg" alt="">
-        </div>
-        <div class="blog-details">
-            <h4>The lagos lifestyle</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                A adipisci aperiam asperiores aspernatur blanditiis delectus ducimus
-                error ex laborum natus nesciunt obcaecati, possimus, praesentium ratione
-                reprehenderit, sequi soluta ut veniam.</p>
-            <a href="">Continue Reading</a>
-        </div>
-    </div>
+
+
 
 </section>
 

@@ -77,7 +77,7 @@
                        <li> <a href="cart"><span class="icon-shopping-cart"></span></a></li>
 
                         <li class="has-children">
-                                    <p class="mb-0 d-none d-sm-block navbar-profile-name">{{ Auth::user()->name }}</p>
+{{--                                    <p class="mb-0 d-none d-sm-block navbar-profile-name">{{ Auth::user()->name }}</p>--}}
                                 <ul class="dropdown arrow-top">
                                     <li class="has-children">
                                         <a class="dropdown-item preview-item" href="{{url('logout')}}"
@@ -97,6 +97,7 @@
                                         </a>
                                     </li>
                                 </ul>
+
 
                         </li>
                     </ul>

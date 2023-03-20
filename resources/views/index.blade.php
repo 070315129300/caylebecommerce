@@ -11,30 +11,19 @@
 </section>
 
 <section id="featuress" class="section-p1">
+    @foreach( $user as $users)
+    <div class="feat-box">
+        <img  height="120px" src="freeshippingimage/{{$users->image}}" width="120px" alt="">
+        <h6>free shipping</h6>
+        <h6>{{$users->productname}}</h6>
+    </div>
+    @endforeach
     <div class="feat-box">
         <img src="images/hero_3.jpg" height="120px" width="120px" alt="">
         <h6>free shipping</h6>
+
     </div>
-    <div class="feat-box">
-        <img src="images/hero_3.jpg" height="120px" width="120px" alt="">
-        <h6>free shipping</h6>
-    </div>
-    <div class="feat-box">
-        <img src="images/hero_3.jpg" height="120px" width="120px" alt="">
-        <h6>free shipping</h6>
-    </div>
-    <div class="feat-box">
-        <img src="images/hero_3.jpg" height="120px" width="120px" alt="">
-        <h6>free shipping</h6>
-    </div>
-    <div class="feat-box">
-        <img src="images/hero_3.jpg" height="120px" width="120px" alt="">
-        <h6>free shipping</h6>
-    </div>
-    <div class="feat-box">
-        <img src="images/hero_3.jpg" height="120px" width="120px" alt="">
-        <h6>free shipping</h6>
-    </div>
+
 
 </section>
 

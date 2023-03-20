@@ -3,12 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Freeshipping;
+use App\Models\Blog;
+
 
 class LoadController extends Controller
 {
     public function index()
     {
-        return view('index');
+        $user = Freeshipping ::all();
+        return view('index', compact('user'));
     }
     public function malecloth(){
         return view('pages.malecloth');
@@ -23,7 +27,8 @@ class LoadController extends Controller
         return view('pages.about');
     }
     public function blog(){
-        return view('pages.blog');
+        $user = Blog::all();
+        return view('pages.blog', compact('user'));
     }
     public function contact(){
         return view('pages.contact');
