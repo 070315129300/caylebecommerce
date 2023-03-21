@@ -198,7 +198,7 @@ body{
     justify-content: center;
     align-items: flex-start;
     text-align: center;
-    min-width: 580px;
+    min-width: 660px;
     height: 50vh;
     background-size: cover;
     background-position: center;
@@ -233,11 +233,11 @@ body{
     justify-content: center;
     align-items: flex-start;
     text-align: center;
-    min-width: 30px;
+    min-width: 420px;
     height: 30vh;
     background-size: cover;
     background-position: center;
-    padding: 50px;
+    padding: 20px;
     margin-bottom: 20px;
 
 }
